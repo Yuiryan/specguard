@@ -40,7 +40,7 @@ V1 1/12 → V2 12/12; cùng dữ liệu, cùng offline adapter, cùng bộ chấ
 
 ## 9. Model Swap
 
-**Chưa thực hiện.** Hai adapter Ollama và Gemini đã có giao thức và mock transport test, nhưng chưa có hai tập log model thật. Tài liệu chỉ rõ cách chọn hai dòng model, chạy 3 lượt/ca và giữ điều kiện thử nghiệm nhất quán. [Nhật ký và cách bổ sung](model-swap-log.md).
+Hai adapter Ollama và Gemini đã có giao thức và mock transport test, nhưng chưa có hai tập log model thật. Tài liệu chỉ rõ cách chọn hai dòng model, chạy 3 lượt/ca và giữ điều kiện thử nghiệm nhất quán. [Nhật ký và cách bổ sung](model-swap-log.md).
 
 ## 10. Sử dụng và an toàn
 
