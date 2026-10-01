@@ -16,4 +16,4 @@ Ngày 01/10/2026, Node.js v24.14.0 trên Windows.
 
 Ảnh dùng trong video là khung nhìn thật của giao diện; các lời giải thích cạnh ảnh được biên soạn riêng. Các ảnh full-page thử ban đầu bị lỗi ghép trong công cụ chụp đã được thay bằng ảnh viewport, không đưa ảnh lỗi vào video.
 
-Không kiểm tra được đăng nhập/xuất bản GitHub vì GitHub CLI chưa có phiên xác thực trong lúc xây dựng. Không tuyên bố đã có repository công khai trước khi kiểm tra URL sau khi push.
+Đã xác minh GitHub CLI đăng nhập tài khoản Yuiryan và đã tạo, push nhánh main lên [repository công khai](https://github.com/Yuiryan/specguard). GitHub API xác nhận visibility PUBLIC và file video demo có trên repository.

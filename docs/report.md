@@ -58,4 +58,4 @@ Case study sử dụng khung Situation–Task–Action–Result và phần giớ
 
 ## Những việc cần trước khi nộp bản hoàn chỉnh
 
-Chạy LLM thật và hai dòng mô hình độc lập; cập nhật số liệu/5-Whys nếu khác offline; xuất bản GitHub bằng tài khoản chủ sở hữu; bổ sung thông tin cá nhân theo quy định của lớp. Chưa có cơ sở khẳng định hồ sơ offline đã đạt đủ 12 yêu cầu ở mức thực nghiệm AI.
+Chạy LLM thật và hai dòng mô hình độc lập; cập nhật số liệu/5-Whys nếu khác offline; repository đã xuất bản tại [Yuiryan/specguard](https://github.com/Yuiryan/specguard); bổ sung thông tin cá nhân theo quy định của lớp. Chưa có cơ sở khẳng định hồ sơ offline đã đạt đủ 12 yêu cầu ở mức thực nghiệm AI.

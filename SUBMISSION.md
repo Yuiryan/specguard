@@ -1,8 +1,8 @@
 # Đối chiếu 12 sản phẩm cuối khóa
 
-**Sản phẩm:** SpecGuard · **Tài khoản dự kiến nộp:** Yuiryan · **Bản:** Offline.
+**Sản phẩm:** SpecGuard · **Tài khoản GitHub:** Yuiryan · **Bản:** Offline.
 
-Nguồn yêu cầu: `Buoi12_ChuanBiKyNangVaDinhHuongNgheNghiep.pdf`, trang 41. “Có tài liệu” không đồng nghĩa “đã có bằng chứng LLM”. Các mục 5, 6, 8 mới có bằng chứng offline; mục 9 chưa thực hiện. Việc đưa lên GitHub cần đăng nhập tài khoản chủ sở hữu.
+Nguồn yêu cầu: `Buoi12_ChuanBiKyNangVaDinhHuongNgheNghiep.pdf`, trang 41. “Có tài liệu” không đồng nghĩa “đã có bằng chứng LLM”. Các mục 5, 6, 8 mới có bằng chứng offline; mục 9 chưa thực hiện. Repository công khai: [Yuiryan/specguard](https://github.com/Yuiryan/specguard).
 
 | # | Yêu cầu | Sản phẩm tương ứng | Trạng thái |
 |---|---|---|---|
@@ -17,13 +17,13 @@ Nguồn yêu cầu: `Buoi12_ChuanBiKyNangVaDinhHuongNgheNghiep.pdf`, trang 41. �
 | 9 | Model Swap độc lập | [model-swap-log](docs/model-swap-log.md), [adapters](src/specguard/adapters.mjs) | **CHƯA THỰC HIỆN**; có runner và quy trình bổ sung |
 | 10 | Hướng dẫn và an toàn | [README](README.md), [user-guide](docs/user-guide.md), [limitations-safety](docs/limitations-safety.md) | Đã viết theo chức năng thực tế |
 | 11 | Video 3 phút / link demo | [video 180 giây](demo/specguard-demo-180s.mp4), [kịch bản](demo/demo-script.md), [HTML](index.html) | Có video ghép ảnh chạy thật, thuyết minh bằng chữ; không phải quay thao tác liên tục |
-| 12 | Case study lên GitHub/LinkedIn | [case-study](docs/case-study.md) | Bản thảo hoàn chỉnh; chưa xác nhận đã đăng GitHub |
+| 12 | Case study lên GitHub/LinkedIn | [case-study](docs/case-study.md) | Đã đăng trong repository GitHub công khai |
 
 ## Điều kiện để chốt bài AI đầy đủ
 
 1. Chạy V1 và V2 trên cùng bộ input bằng một LLM, lưu raw output và ghi lại model ID, ngày, tham số.
 2. Chạy mô hình thuộc dòng khác bằng cùng cấu hình; đối chiếu schema, dừng khi thiếu tin, trích dẫn, latency. Không gọi hai mock là Model Swap.
 3. Nếu kết quả mới khác offline, cập nhật 5-Whys, bảng số liệu và case study theo log; không ép số liệu đạt đẹp.
-4. Chủ tài khoản đăng nhập GitHub để xuất bản repo công khai; bổ sung họ tên/MSSV nếu quy định nộp yêu cầu.
+4. Repository đã xuất bản công khai; bổ sung họ tên/MSSV nếu quy định nộp yêu cầu.
 
 Không tuyên bố tỷ lệ tiết kiệm thời gian, kết quả người dùng thật hoặc số điểm khóa học khi chưa đo/được xác nhận.
