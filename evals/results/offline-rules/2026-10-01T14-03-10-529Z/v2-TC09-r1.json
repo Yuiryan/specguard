@@ -1,0 +1,38 @@
+{
+  "id": "TC09",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.577Z",
+  "inputSha256": "95491004fa60b0e937040539729a4c2488c599aa9e7c482c1d3455943d8ce402",
+  "output": {
+    "status": "NEED_INFO",
+    "issues": [
+      "CONTEXT_LIMIT"
+    ],
+    "questions": [
+      "Tách đặc tả thành từng tính năng tối đa 12.000 ký tự; giữ các ràng buộc liên quan cùng nhau."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.13
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

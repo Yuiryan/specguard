@@ -1,0 +1,38 @@
+{
+  "id": "TC03",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.568Z",
+  "inputSha256": "82f672161e216734f997e54ac92073998ef965926c8dc15a029a9089d203073e",
+  "output": {
+    "status": "NEED_INFO",
+    "issues": [
+      "AMBIGUOUS"
+    ],
+    "questions": [
+      "Thay mô tả định tính bằng điều kiện đo được và bối cảnh đo."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.192
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

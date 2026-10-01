@@ -1,0 +1,38 @@
+{
+  "id": "TC02",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.566Z",
+  "inputSha256": "d880c60650986627f19e37386894d640f5924136e2b7aed54b57a1b7e2ff764f",
+  "output": {
+    "status": "NEED_INFO",
+    "issues": [
+      "MISSING_Tiêu chí"
+    ],
+    "questions": [
+      "Bổ sung trường Tiêu chí: với nội dung cụ thể."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 1.033
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "TC10",
+  "run": 1,
+  "version": "v1",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.554Z",
+  "inputSha256": "792fee090ff922a54f1babb30c0dfefcdf684dba0657ed08a7663fa2e11138c6",
+  "output": {
+    "status": "REVIEW",
+    "issues": [],
+    "questions": [],
+    "criteria": [
+      {
+        "id": "AC1",
+        "given": "Người dùng hệ thống",
+        "when": "Hoàn thành tính năng",
+        "then": "Hoàn thành trong 1 giây",
+        "evidence": []
+      }
+    ],
+    "meta": {
+      "version": "v1",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": true,
+      "sanitized": false,
+      "latencyMs": 0.175
+    }
+  },
+  "score": {
+    "pass": false,
+    "checks": {
+      "status": false,
+      "arrays": true,
+      "issue": false,
+      "stops": false,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

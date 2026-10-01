@@ -1,0 +1,3 @@
+Người dùng: Sinh viên đã đăng nhập
+Mục tiêu: Đăng ký phòng tự học
+Yêu cầu: Chọn phòng còn trống và nhấn Đặt chỗ

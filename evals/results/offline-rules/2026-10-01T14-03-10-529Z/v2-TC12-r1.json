@@ -1,0 +1,38 @@
+{
+  "id": "TC12",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.583Z",
+  "inputSha256": "5039901415e918e3343e426e42580407825d602dfc018d5824cece0f10657406",
+  "output": {
+    "status": "NEED_INFO",
+    "issues": [
+      "DUPLICATE_FIELD"
+    ],
+    "questions": [
+      "Chốt một giá trị cho Người dùng."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.114
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

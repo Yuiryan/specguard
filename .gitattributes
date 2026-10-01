@@ -1,0 +1,10 @@
+* text=auto
+*.mjs text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.png binary
+*.mp4 binary
+# Preserve deliberate whitespace in empty/oversized evaluation fixtures.
+demo/sample-inputs/*.txt -whitespace
+evals/*.csv -whitespace
+evals/results/**/*.csv -whitespace

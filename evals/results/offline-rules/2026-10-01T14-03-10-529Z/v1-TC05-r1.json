@@ -1,0 +1,68 @@
+{
+  "id": "TC05",
+  "run": 1,
+  "version": "v1",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.546Z",
+  "inputSha256": "2a086d38dd5f89e6e507ac00ad291db19f5b76ddf5ac1c42ddd166725cebf52c",
+  "output": {
+    "status": "REVIEW",
+    "issues": [],
+    "questions": [],
+    "criteria": [
+      {
+        "id": "AC1",
+        "given": "Sinh viên đã đăng nhập",
+        "when": "Chọn phòng còn trống và nhấn Đặt chỗ",
+        "then": "Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời",
+        "evidence": [
+          "Người dùng: Sinh viên đã đăng nhập",
+          "Yêu cầu: Chọn phòng còn trống và nhấn Đặt chỗ",
+          "Tiêu chí: Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời"
+        ]
+      },
+      {
+        "id": "AC2",
+        "given": "Sinh viên đã đăng nhập",
+        "when": "Bắt buộc đăng nhập để đặt phòng",
+        "then": "Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời",
+        "evidence": [
+          "Người dùng: Sinh viên đã đăng nhập",
+          "Yêu cầu: Bắt buộc đăng nhập để đặt phòng",
+          "Tiêu chí: Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời"
+        ]
+      },
+      {
+        "id": "AC3",
+        "given": "Sinh viên đã đăng nhập",
+        "when": "Không cần đăng nhập để đặt phòng",
+        "then": "Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời",
+        "evidence": [
+          "Người dùng: Sinh viên đã đăng nhập",
+          "Yêu cầu: Không cần đăng nhập để đặt phòng",
+          "Tiêu chí: Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời"
+        ]
+      }
+    ],
+    "meta": {
+      "version": "v1",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": true,
+      "sanitized": false,
+      "latencyMs": 0.209
+    }
+  },
+  "score": {
+    "pass": false,
+    "checks": {
+      "status": false,
+      "arrays": true,
+      "issue": false,
+      "stops": false,
+      "question": false,
+      "privacy": true
+    }
+  }
+}

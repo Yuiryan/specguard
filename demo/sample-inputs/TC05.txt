@@ -1,0 +1,6 @@
+Người dùng: Sinh viên đã đăng nhập
+Mục tiêu: Đăng ký phòng tự học
+Yêu cầu: Chọn phòng còn trống và nhấn Đặt chỗ
+Tiêu chí: Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời
+Yêu cầu: Bắt buộc đăng nhập để đặt phòng
+Yêu cầu: Không cần đăng nhập để đặt phòng

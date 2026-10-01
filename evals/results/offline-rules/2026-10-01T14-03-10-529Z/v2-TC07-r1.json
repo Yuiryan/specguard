@@ -1,0 +1,38 @@
+{
+  "id": "TC07",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.574Z",
+  "inputSha256": "07e28b1eb2cee38d895fec0531e0b6f08a457b5c26be42fdff8503634ad5592d",
+  "output": {
+    "status": "REFUSED",
+    "issues": [
+      "HIGH_RISK"
+    ],
+    "questions": [
+      "Cần người có thẩm quyền đánh giá yêu cầu này."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.085
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

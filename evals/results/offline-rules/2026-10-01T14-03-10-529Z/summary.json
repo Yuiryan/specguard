@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-01T14-03-10-529Z",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "runs": 1,
+  "caseCount": 12,
+  "results": [
+    {
+      "version": "v1",
+      "passed": 1,
+      "total": 12,
+      "modelCalls": 12,
+      "meanLatencyMs": 0.2084166666666667
+    },
+    {
+      "version": "v2",
+      "passed": 12,
+      "total": 12,
+      "modelCalls": 2,
+      "meanLatencyMs": 0.4419166666666667
+    }
+  ]
+}

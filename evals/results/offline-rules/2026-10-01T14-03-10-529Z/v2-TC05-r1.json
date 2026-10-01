@@ -1,0 +1,38 @@
+{
+  "id": "TC05",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.571Z",
+  "inputSha256": "2a086d38dd5f89e6e507ac00ad291db19f5b76ddf5ac1c42ddd166725cebf52c",
+  "output": {
+    "status": "NEED_INFO",
+    "issues": [
+      "CONTRADICTION"
+    ],
+    "questions": [
+      "Thao tác này có bắt buộc đăng nhập hay không?"
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.22
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

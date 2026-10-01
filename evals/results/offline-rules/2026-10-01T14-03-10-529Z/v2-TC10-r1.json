@@ -1,0 +1,38 @@
+{
+  "id": "TC10",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.579Z",
+  "inputSha256": "792fee090ff922a54f1babb30c0dfefcdf684dba0657ed08a7663fa2e11138c6",
+  "output": {
+    "status": "INVALID_INPUT",
+    "issues": [
+      "EMPTY_OR_GARBAGE"
+    ],
+    "questions": [
+      "Hãy nhập đặc tả có nội dung."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.229
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

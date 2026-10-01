@@ -1,0 +1,38 @@
+{
+  "id": "TC06",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.572Z",
+  "inputSha256": "39caa8cccb98d143b1ef1a69dab67bebe30d1d078ec7bf71149cc64c198605ec",
+  "output": {
+    "status": "REFUSED",
+    "issues": [
+      "OUT_OF_SCOPE"
+    ],
+    "questions": [
+      "Chỉ gửi đặc tả tính năng phần mềm."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.042
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

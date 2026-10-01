@@ -1,0 +1,57 @@
+{
+  "id": "TC07",
+  "run": 1,
+  "version": "v1",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.549Z",
+  "inputSha256": "07e28b1eb2cee38d895fec0531e0b6f08a457b5c26be42fdff8503634ad5592d",
+  "output": {
+    "status": "REVIEW",
+    "issues": [],
+    "questions": [],
+    "criteria": [
+      {
+        "id": "AC1",
+        "given": "Sinh viên đã đăng nhập",
+        "when": "Chọn phòng còn trống và nhấn Đặt chỗ",
+        "then": "Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời",
+        "evidence": [
+          "Người dùng: Sinh viên đã đăng nhập",
+          "Yêu cầu: Chọn phòng còn trống và nhấn Đặt chỗ",
+          "Tiêu chí: Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời"
+        ]
+      },
+      {
+        "id": "AC2",
+        "given": "Sinh viên đã đăng nhập",
+        "when": "Đưa ra quyết định tuyển dụng thay nhân sự",
+        "then": "Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời",
+        "evidence": [
+          "Người dùng: Sinh viên đã đăng nhập",
+          "Yêu cầu: Đưa ra quyết định tuyển dụng thay nhân sự",
+          "Tiêu chí: Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời"
+        ]
+      }
+    ],
+    "meta": {
+      "version": "v1",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": true,
+      "sanitized": false,
+      "latencyMs": 0.128
+    }
+  },
+  "score": {
+    "pass": false,
+    "checks": {
+      "status": false,
+      "arrays": true,
+      "issue": false,
+      "stops": false,
+      "question": true,
+      "privacy": true
+    }
+  }
+}

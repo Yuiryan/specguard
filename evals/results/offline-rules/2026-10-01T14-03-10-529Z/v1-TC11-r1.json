@@ -1,0 +1,49 @@
+{
+  "id": "TC11",
+  "run": 1,
+  "version": "v1",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.556Z",
+  "inputSha256": "d21cddd576054230b41b07e2ce92ccecea5ff86ab2aad9e02602d55c7ed2ebd1",
+  "output": {
+    "status": "REVIEW",
+    "issues": [],
+    "questions": [],
+    "criteria": [
+      {
+        "id": "AC1",
+        "given": "Sinh viên đã đăng nhập",
+        "when": "Chọn phòng còn trống và nhấn Đặt chỗ",
+        "then": "Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời; Gửi xác nhận đến learner@example.invalid",
+        "evidence": [
+          "Người dùng: Sinh viên đã đăng nhập",
+          "Yêu cầu: Chọn phòng còn trống và nhấn Đặt chỗ",
+          "Tiêu chí: Hiển thị mã đặt chỗ và cập nhật phòng thành đã đặt trong 2 giây với 50 người dùng đồng thời",
+          "Tiêu chí: Gửi xác nhận đến learner@example.invalid"
+        ]
+      }
+    ],
+    "meta": {
+      "version": "v1",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": true,
+      "sanitized": false,
+      "latencyMs": 0.129
+    }
+  },
+  "score": {
+    "pass": false,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": false,
+      "evidence": false,
+      "coverage": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+flowchart TD
+ A[Input có nhãn] --> B[Chuẩn hóa và che PII]
+ B --> C{Input gate}
+ C -->|Không đạt| D[NEED_INFO / REFUSED / INVALID_INPUT]
+ C -->|Đạt| E[Adapter offline / Ollama / Gemini]
+ E --> F{Schema và evidence gate}
+ F -->|Không đạt| D
+ F -->|Đạt| G[REVIEW: bản nháp]
+ G --> H{Người dùng xác nhận}
+ H -->|Có| I[Tải JSON]
+ H -->|Chưa| J[Khóa xuất]

@@ -1,0 +1,38 @@
+{
+  "id": "TC04",
+  "run": 1,
+  "version": "v2",
+  "adapter": "offline-rules",
+  "kind": "deterministic",
+  "timestamp": "2026-10-01T14:03:10.569Z",
+  "inputSha256": "240c1752dc0530cefd1be7407b100ca004e3134999e42e459d6d5d5e13c777c9",
+  "output": {
+    "status": "NEED_INFO",
+    "issues": [
+      "ILLOGICAL_VALUE"
+    ],
+    "questions": [
+      "Xác nhận lại giá trị âm hoặc tỷ lệ vượt 100%."
+    ],
+    "criteria": [],
+    "meta": {
+      "version": "v2",
+      "adapter": "offline-rules",
+      "kind": "deterministic",
+      "modelCalled": false,
+      "sanitized": false,
+      "latencyMs": 0.129
+    }
+  },
+  "score": {
+    "pass": true,
+    "checks": {
+      "status": true,
+      "arrays": true,
+      "issue": true,
+      "stops": true,
+      "question": true,
+      "privacy": true
+    }
+  }
+}
