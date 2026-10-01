@@ -1,8 +1,6 @@
 # SpecGuard — Rà soát yêu cầu phần mềm có căn cứ
 
-SpecGuard nhận một đặc tả tính năng có nhãn, phát hiện thông tin thiếu và tạo bản nháp tiêu chí nghiệm thu Given/When/Then với trích dẫn. Người dùng phải đối chiếu trước khi xuất JSON. Ví dụ xuyên suốt là tính năng đặt phòng tự học.
-
-Kiểm thử offline trên 12 ca tổng hợp: **V1 đạt 1/12**, **V2 đạt 12/12**. Model Swap chưa thực hiện.
+Đây là bài tập cuối khoá của AOTS x HCMUT khoá 2026. SpecGuard nhận một đặc tả tính năng có nhãn, phát hiện thông tin thiếu và tạo bản nháp tiêu chí nghiệm thu Given/When/Then với trích dẫn. Người dùng phải đối chiếu trước khi xuất JSON. Ví dụ xuyên suốt là tính năng đặt phòng tự học.
 
 ## Dùng ngay
 
