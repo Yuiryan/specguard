@@ -47,12 +47,4 @@ tests/                        # kiểm thử tự động
 web/template.html             # giao diện nguồn
 scripts/build-demo.mjs         # dựng demo từ cùng engine dùng trong eval
 demo/                         # mẫu input, kịch bản, ảnh/video demo
-```
-
-## Kết nối mô hình
-
-Xem **[docs/model-swap-log.md](docs/model-swap-log.md)**. Mô hình chỉ chạy qua CLI. Giao diện HTML luôn offline và không yêu cầu key. Tham số model do người dùng chọn từ danh sách thực tế của nhà cung cấp hoặc máy cục bộ.
-
-## Giới hạn
-
-Đầu vào hiện tại là tiếng Việt có 4 nhãn cố định, tối đa 12.000 ký tự ở V2. Không đọc PDF/DOCX, không OCR, không RAG. Cổng từ khóa có thể chặn nhầm và bỏ sót. Cổng trích dẫn kiểm tra sự hiện diện, không xác minh sự thật nghiệp vụ; người dùng vẫn phải duyệt. Ghép nhiều yêu cầu/tiêu chí có thể gắn sai quan hệ, nên demo ưu tiên một tính năng mỗi lần. Chưa đo hiệu quả người dùng, chi phí API hay độ ổn định LLM.
+``
