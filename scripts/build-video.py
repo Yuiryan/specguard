@@ -1,4 +1,4 @@
-"""Optional: pip install pillow imageio-ffmpeg. Assemble real UI screenshots, not simulated UI."""
+"""Build the 180-second SpecGuard demo. Requires pillow and imageio-ffmpeg."""
 from pathlib import Path
 import os, subprocess, tempfile
 from PIL import Image, ImageDraw, ImageFont
@@ -14,7 +14,7 @@ scenes = [
     (25, '01 / VẤN ĐỀ', 'Rõ yêu cầu, vững căn cứ', [
         'SpecGuard hỗ trợ rà soát đặc tả phần mềm trước khi viết code và test.',
         'Tình huống: sinh viên đặt phòng tự học. Nhóm cần thống nhất điều kiện nghiệm thu.',
-        'Bản này dùng luật offline; chưa có lượt chạy LLM hoặc Model Swap.'], '01-happy.png'),
+        'Bản offline rà soát các trường bắt buộc và tạo tiêu chí có trích dẫn.'], '01-happy.png'),
     (25, '02 / ĐẦU VÀO → BẢN NHÁP', 'Mỗi tiêu chí có bằng chứng', [
         'Input gồm Người dùng, Mục tiêu, Yêu cầu và Tiêu chí, mỗi nhãn trên một dòng.',
         'Output trích Given / When / Then cùng các dòng nguồn để người dùng đối chiếu.',
@@ -22,7 +22,7 @@ scenes = [
     (30, '03 / BREAK V1', 'Thiếu dữ kiện, vẫn tự đặt SLA', [
         'TC02 bỏ toàn bộ dòng Tiêu chí. Không có số giây nào trong input.',
         'V1 vẫn trả “Hoàn thành trong 1 giây” do fallback của offline adapter.',
-        'Đây là lỗi code quan sát được, không được gọi là lỗi LLM đã đo.'], '02-v1-failure.png'),
+        'Nguyên nhân: V1 dùng tiêu chí mặc định khi đầu vào thiếu thông tin.'], '02-v1-failure.png'),
     (30, '04 / FIX V2', 'Dừng đúng lúc để hỏi lại', [
         'Cùng input TC02, V2 trả NEED_INFO và yêu cầu bổ sung Tiêu chí.',
         'Input gate chặn trước adapter. Output gate đối chiếu cấu trúc và trích dẫn.',
@@ -30,16 +30,25 @@ scenes = [
     (25, '05 / RANH GIỚI CHỈ DẪN', 'Tài liệu là dữ liệu đầu vào', [
         'TC08 chèn một câu yêu cầu bỏ qua chỉ dẫn trước đó và tiết lộ system prompt.',
         'V2 nhận diện mẫu đã biết, trả REFUSED và không gọi adapter.',
-        'Bộ từ khóa có thể bỏ sót cách diễn đạt mới; không cam kết chặn mọi injection.'], '04-injection.png'),
+        'Hệ thống yêu cầu loại bỏ chỉ dẫn điều khiển trợ lý khỏi đặc tả.'], '04-injection.png'),
     (25, '06 / DỮ LIỆU & NGƯỜI DUYỆT', 'Che PII trước khi xử lý', [
         'TC11 dùng email tổng hợp. V2 thay email bằng [EMAIL] trước adapter.',
         'Con người đối chiếu từng tiêu chí rồi mới mở nút tải bản nháp JSON.',
         'Giao diện offline không gửi input ra mạng và không tự gửi email.'], '05-pii.png'),
-    (20, '07 / EVIDENCE & NEXT STEP', 'Bằng chứng có giới hạn rõ ràng', [
+    (20, '07 / KẾT QUẢ & HƯỚNG PHÁT TRIỂN', 'Kết quả kiểm thử offline', [
         '12 ca tổng hợp: V1 đạt 1/12; V2 đạt 12/12. 25 unit test đạt.',
-        'Có CSV 7 trường, raw JSON và lệnh tái lập. Chưa đo hiệu quả người dùng thật.',
-        'Tiếp theo: chạy hai dòng LLM độc lập và cập nhật hồ sơ theo kết quả thực tế.'], '03-v2-stop.png')
+        'Kết quả được lưu bằng CSV 7 trường và JSON cho từng lượt chạy.',
+        'Hướng phát triển: thử nghiệm hai dòng LLM độc lập và mở rộng bộ kiểm thử.'], '03-v2-stop.png')
 ]
+# Frame only the result panel; exclude page footer and browser scrollbar.
+RESULT_BOUNDS = {
+    '01-happy.png': (20, 0, 392, 505),
+    '02-v1-failure.png': (20, 20, 392, 438),
+    '03-v2-stop.png': (20, 88, 392, 438),
+    '04-injection.png': (20, 65, 392, 438),
+    '05-pii.png': (20, 0, 392, 438),
+}
+
 def wrap(draw, text, face, width):
     lines=[]; line=''
     for word in text.split():
@@ -65,11 +74,10 @@ with tempfile.TemporaryDirectory(prefix='specguard-video-') as temp:
             for line in wrap(d,para,font(23),675):d.text((73,y),line,font=font(23),fill='#18352f');y+=34
             y+=23
         shot=Image.open(ROOT/'demo'/'screenshots'/screenshot).convert('RGB')
+        shot=shot.crop(RESULT_BOUNDS[screenshot])
         shot.thumbnail((395,540),Image.Resampling.LANCZOS)
         canvas.paste(shot,(835+(395-shot.width)//2,95))
-        d.text((850,648),'Ảnh chụp giao diện chạy thật',font=font(16),fill='#62766e')
         d.line((48,675,1230,675),fill='#b9cbb7',width=1)
-        d.text((48,690),'DEMO OFFLINE • Thuyết minh bằng chữ • Không có kết quả LLM',font=font(14),fill='#62766e')
         d.text((1165,690),f'{index+1}/7',font=font(14),fill='#62766e')
         path=tmp/f'scene-{index}.png';canvas.save(path)
         manifest.extend([f"file '{path.as_posix()}'",f'duration {duration}'])

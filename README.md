@@ -19,7 +19,7 @@ Mở `http://127.0.0.1:8787`. Chọn tình huống mẫu → chọn V1/V2 → R�
 - **[evals/v1-vs-v2.md](evals/v1-vs-v2.md)**: kết quả kiểm thử V1–V2.
 - **[docs/case-study.md](docs/case-study.md)**: case study của dự án.
 - **[demo/demo-script.md](demo/demo-script.md)**: kịch bản 180 giây và các ảnh chạy thật.
-- **[Video demo 3 phút](demo/specguard-demo-180s.mp4)**: thuyết minh bằng chữ, ghép ảnh kết quả chạy thật; không có giọng đọc.
+- **[Video demo 3 phút](demo/specguard-demo-180s.mp4)**: giới thiệu quy trình và kết quả kiểm thử.
 
 ## Tái lập
 

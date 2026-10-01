@@ -12,4 +12,4 @@ Ngày 01/10/2026, Node.js v24.14.0 trên Windows.
 | UI V1 thiếu tiêu chí | Tái hiện “Hoàn thành trong 1 giây” | Fallback cố định, không phải LLM |
 | UI V2 thiếu tiêu chí | NEED_INFO và khóa xuất | Có ảnh chụp kết quả |
 | UI injection, PII | REFUSED; email thành [EMAIL] | Chỉ mẫu đã thử |
-| Video | 1.800 khung hình, 10 fps, 180,0 giây | 7 cảnh ghép ảnh, không âm thanh |
+| Video | 1.800 khung hình, 10 fps, 180,0 giây | 7 phần: bài toán, đầu vào, V1, V2, injection, PII và kết quả |
