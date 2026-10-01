@@ -1,7 +1,5 @@
 # Đối chiếu 12 sản phẩm cuối khóa
 
-Các mục 5, 6, 8 có kết quả kiểm thử offline; mục 9 chưa thực hiện.
-
 | # | Yêu cầu | Sản phẩm tương ứng | Trạng thái |
 |---|---|---|---|
 | 1 | Mô tả bài toán thực tế | [01-problem-statement](docs/01-problem-statement.md)
