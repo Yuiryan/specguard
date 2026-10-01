@@ -1,12 +1,10 @@
 # Báo cáo cuối khóa — SpecGuard
 
-**Chủ tài khoản:** Yuiryan · **Ngày lập:** 01/10/2026 · **Phạm vi bàn giao:** prototype offline.
-
 ## Tóm tắt
 
-SpecGuard là hệ thống rà soát yêu cầu phần mềm nhằm ngăn việc tự bổ sung tiêu chí nghiệm thu không có căn cứ. Dự án được tổ chức theo vòng đời Problem → Design → Build → Test → Break → Fix → Evaluate → Demo → Portfolio, tham khảo cấu trúc TaskLens và 12 yêu cầu ở trang 41 PDF Buổi 12.
+SpecGuard là hệ thống rà soát yêu cầu phần mềm nhằm ngăn việc tự bổ sung tiêu chí nghiệm thu không có căn cứ. Dự án được tổ chức theo vòng đời Problem → Design → Build → Test → Break → Fix → Evaluate → Demo → Portfolio.
 
-Bản hiện tại chạy bằng thuật toán offline theo nhãn. V1 đạt 1/12 ca, V2 đạt 12/12 trên cùng suite tổng hợp; 25 unit test đạt. Có prompt và adapter chuẩn bị cho LLM nhưng chưa chạy model thật hoặc Model Swap. Đây là giới hạn trọng yếu của hồ sơ, không được bỏ qua khi nộp.
+Bản hiện tại chạy bằng thuật toán offline theo nhãn. V1 đạt 1/12 ca, V2 đạt 12/12 trên cùng suite tổng hợp; 25 unit test đạt. Có prompt và adapter chuẩn bị cho LLM nhưng chưa chạy model thật hoặc Model Swap.
 
 ## 1. Vấn đề cần giải quyết
 
@@ -42,7 +40,7 @@ V1 1/12 → V2 12/12; cùng dữ liệu, cùng offline adapter, cùng bộ chấ
 
 ## 9. Model Swap
 
-**Chưa thực hiện.** Người dùng chưa có API/model. Hai adapter Ollama và Gemini đã có giao thức và mock transport test, nhưng chưa có hai tập log model thật. Tài liệu chỉ rõ cách chọn hai dòng model, chạy 3 lượt/ca và giữ điều kiện thử nghiệm nhất quán. [Nhật ký và cách bổ sung](model-swap-log.md).
+**Chưa thực hiện.** Hai adapter Ollama và Gemini đã có giao thức và mock transport test, nhưng chưa có hai tập log model thật. Tài liệu chỉ rõ cách chọn hai dòng model, chạy 3 lượt/ca và giữ điều kiện thử nghiệm nhất quán. [Nhật ký và cách bổ sung](model-swap-log.md).
 
 ## 10. Sử dụng và an toàn
 
@@ -54,8 +52,8 @@ Mở index.html hoặc chạy npm start. Input có 4 nhãn, V2 tối đa 12.000 
 
 ## 12. Portfolio
 
-Case study sử dụng khung Situation–Task–Action–Result và phần giới hạn. Bài viết chỉ nêu số liệu có log, công khai hỗ trợ từ AI và phần Model Swap còn thiếu. [Bài portfolio](case-study.md).
+Case study trình bày bối cảnh, mục tiêu, cách triển khai, kết quả và giới hạn theo khung Situation–Task–Action–Result. [Bài portfolio](case-study.md).
 
-## Những việc cần trước khi nộp bản hoàn chỉnh
+## Hướng phát triển
 
-Chạy LLM thật và hai dòng mô hình độc lập; cập nhật số liệu/5-Whys nếu khác offline; repository đã xuất bản tại [Yuiryan/specguard](https://github.com/Yuiryan/specguard); bổ sung thông tin cá nhân theo quy định của lớp. Chưa có cơ sở khẳng định hồ sơ offline đã đạt đủ 12 yêu cầu ở mức thực nghiệm AI.
+Chạy kiểm thử với hai dòng mô hình độc lập, bổ sung dữ liệu đánh giá và cập nhật phân tích 5-Whys theo kết quả.

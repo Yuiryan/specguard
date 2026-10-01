@@ -14,7 +14,7 @@
 
 ## Tự quay lại nếu cần thuyết trình trực tiếp
 
-Chạy `npm start`, mở localhost và làm lần lượt các bước trên. Nêu rõ kết quả là offline. Không nói “AI đã đạt 100%” hoặc “đã thử hai model”. Nếu sau này chạy LLM thật, cập nhật phần kết quả của video theo log mới.
+Chạy `npm start`, mở localhost và làm lần lượt các bước trên. Khi có kết quả LLM, cập nhật phần số liệu trong video theo log mới.
 
 ## Kiểm tra giao diện đã thực hiện
 

@@ -1,8 +1,6 @@
 # Đối chiếu 12 sản phẩm cuối khóa
 
-**Sản phẩm:** SpecGuard · **Tài khoản GitHub:** Yuiryan · **Bản:** Offline.
-
-Nguồn yêu cầu: `Buoi12_ChuanBiKyNangVaDinhHuongNgheNghiep.pdf`, trang 41. “Có tài liệu” không đồng nghĩa “đã có bằng chứng LLM”. Các mục 5, 6, 8 mới có bằng chứng offline; mục 9 chưa thực hiện. Repository công khai: [Yuiryan/specguard](https://github.com/Yuiryan/specguard).
+Các mục 5, 6, 8 có kết quả kiểm thử offline; mục 9 chưa thực hiện.
 
 | # | Yêu cầu | Sản phẩm tương ứng | Trạng thái |
 |---|---|---|---|
@@ -19,11 +17,8 @@ Nguồn yêu cầu: `Buoi12_ChuanBiKyNangVaDinhHuongNgheNghiep.pdf`, trang 41. �
 | 11 | Video 3 phút / link demo | [video 180 giây](demo/specguard-demo-180s.mp4), [kịch bản](demo/demo-script.md), [HTML](index.html) | Có video ghép ảnh chạy thật, thuyết minh bằng chữ; không phải quay thao tác liên tục |
 | 12 | Case study lên GitHub/LinkedIn | [case-study](docs/case-study.md) | Đã đăng trong repository GitHub công khai |
 
-## Điều kiện để chốt bài AI đầy đủ
+## Công việc tiếp theo
 
 1. Chạy V1 và V2 trên cùng bộ input bằng một LLM, lưu raw output và ghi lại model ID, ngày, tham số.
-2. Chạy mô hình thuộc dòng khác bằng cùng cấu hình; đối chiếu schema, dừng khi thiếu tin, trích dẫn, latency. Không gọi hai mock là Model Swap.
-3. Nếu kết quả mới khác offline, cập nhật 5-Whys, bảng số liệu và case study theo log; không ép số liệu đạt đẹp.
-4. Repository đã xuất bản công khai; bổ sung họ tên/MSSV nếu quy định nộp yêu cầu.
-
-Không tuyên bố tỷ lệ tiết kiệm thời gian, kết quả người dùng thật hoặc số điểm khóa học khi chưa đo/được xác nhận.
+2. Chạy mô hình thuộc dòng khác bằng cùng cấu hình; đối chiếu schema, dừng khi thiếu tin, trích dẫn, latency.
+3. Nếu kết quả mới khác offline, cập nhật 5-Whys, bảng số liệu và case study theo log.

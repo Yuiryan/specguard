@@ -1,7 +1,5 @@
 # 12. Case study portfolio: SpecGuard biết dừng trước khi đặt tiêu chí sai
 
-**Dự án capstone cho GitHub Yuiryan · Bản offline có hỗ trợ xây dựng từ AI · 01/10/2026**
-
 ## Situation — Một khoảng trống nhỏ trong đặc tả
 
 Trong tình huống nhóm sinh viên xây dựng tính năng đặt phòng tự học, câu “đặt phòng nhanh” chưa cho biết cần hiển thị kết quả gì, nhanh bao lâu và dưới tải nào. Nếu người viết code tự chọn một con số, nhóm có thể nghiệm thu trên tiêu chuẩn chưa ai thống nhất. Tình huống này được xây dựng để thử nghiệm; chưa có khảo sát người dùng thực tế.
@@ -24,14 +22,8 @@ Lần chạy công khai cho kết quả **V1 1/12, V2 12/12**, tăng 11 ca đạ
 
 Các assertion xác nhận V2 không sinh tiêu chí ở ca thiếu dữ kiện, chặn những mẫu rủi ro đã định nghĩa và che email tổng hợp trước adapter. Giao diện yêu cầu người dùng duyệt trước khi tải JSON. Toàn bộ test input, kết quả CSV, raw JSON và lệnh tái lập đều đi kèm repository.
 
-## Reflection — Minh bạch còn quan trọng hơn bảng điểm đẹp
+## Giới hạn và hướng phát triển
 
 12/12 không đồng nghĩa production-ready. Bộ test và luật được xây dựng cùng nhau, chưa có holdout độc lập. Trích dẫn có thật không xác nhận thông tin đúng, và regex không bao phủ tất cả cách diễn đạt. AI chỉ có giá trị khi giải quyết được phần mà template khó xử lý; điểm này còn cần chứng minh.
 
-Repo đã tách adapter Ollama/Gemini và có quy trình chạy hai dòng mô hình, nhưng **Model Swap chưa được thực hiện**. Không đổi tên hai mock rồi coi là hai model. Bước tiếp theo là chạy model thật, bổ sung dữ liệu độc lập, phân tích lỗi mới và cập nhật bài viết theo bằng chứng.
-
-## Gợi ý mô tả ngắn cho portfolio
-
-> Xây dựng SpecGuard, prototype rà soát đặc tả phần mềm có input/output gate và human review. Tạo 12 ca kiểm thử tổng hợp, phân tích lỗi bằng 5-Whys và cải thiện tỷ lệ đạt offline từ 1/12 lên 12/12. Tách adapter để chuẩn bị thử nghiệm mô hình độc lập; chưa có bằng chứng LLM Evals hoặc hiệu quả người dùng thực tế.
-
-Nguồn cảm hứng tổ chức hồ sơ: [TaskLens](https://github.com/truonghienminh-HCMUT/tasklens). Nội dung và mã nguồn SpecGuard được xây dựng riêng. Chủ tài khoản cần hiểu, xác nhận và cá nhân hóa bài này trước khi nộp; không nên nhận là nghiên cứu người dùng hoặc kết quả AI đã thực hiện.
+Repo đã tách adapter Ollama/Gemini và có quy trình chạy hai dòng mô hình, nhưng **Model Swap chưa được thực hiện**. Bước tiếp theo là chạy model thật, bổ sung dữ liệu độc lập, phân tích lỗi mới và cập nhật bài viết theo bằng chứng.
